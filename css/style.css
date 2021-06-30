@@ -135,8 +135,8 @@ SCSS des différentes animations
   margin: 8px;
   border-radius: 100%;
   border: 6px solid;
-  border-color: #9356dc transparent #99e2d0 transparent;
-  animation: spin 3s;
+  border-color: #9356dc #000000 #99e2d0 #ff79da;
+  animation: spin 1s;
 }
 
 .spinloader {
@@ -159,15 +159,15 @@ SCSS des différentes animations
 }
 
 .fade_short {
-  animation: fade-in 1s;
-}
-
-.fade_medium {
   animation: fade-in 2s;
 }
 
+.fade_medium {
+  animation: fade-in 4s;
+}
+
 .fade_long {
-  animation: fade-in 3s;
+  animation: fade-in 6s;
 }
 
 /**
@@ -600,8 +600,8 @@ SCSS des différentes animations
   margin: 8px;
   border-radius: 100%;
   border: 6px solid;
-  border-color: #9356dc transparent #99e2d0 transparent;
-  animation: spin 3s;
+  border-color: #9356dc #000000 #99e2d0 #ff79da;
+  animation: spin 1s;
 }
 
 .spinloader {
@@ -624,15 +624,15 @@ SCSS des différentes animations
 }
 
 .fade_short {
-  animation: fade-in 1s;
-}
-
-.fade_medium {
   animation: fade-in 2s;
 }
 
+.fade_medium {
+  animation: fade-in 4s;
+}
+
 .fade_long {
-  animation: fade-in 3s;
+  animation: fade-in 6s;
 }
 
 /**

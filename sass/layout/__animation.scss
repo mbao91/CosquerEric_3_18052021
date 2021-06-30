@@ -120,7 +120,7 @@ SCSS des différentes animations
     margin: 8px;
     border-radius: 100%;
     border: 6px solid;
-    border-color: $color_primary transparent $color_tertiary transparent;
+    border-color: $color_primary $color_black $color_tertiary $color_secondary;
     animation: spin $spin_time;
   }
 }
