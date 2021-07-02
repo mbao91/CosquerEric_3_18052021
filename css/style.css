@@ -116,6 +116,7 @@ SCSS des différentes animations
   justify-content: center;
   margin-top: 22px;
   animation: rotate_icon 0.5s 1;
+  font-size: x-large;
 }
 
 .spin {
@@ -335,9 +336,8 @@ SCSS du header 375px<
   }
   .header_location {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #d3d3d39e;
     text-align: center;
     border-radius: 0;
     width: 100%;
@@ -352,8 +352,20 @@ SCSS du header 375px<
     text-align: center;
   }
   .header_discover {
-    width: 100%;
+    text-align: center;
     border-radius: 0;
+    width: 100%;
+  }
+
+  .header_discover p {
+    width: 75%;
+    margin: 0 0 8px 0;
+  }
+
+  .header_discover h3 {
+    font-weight: bold;
+    width: 55%;
+    text-align: center;
   }
 
   .btn_header {
@@ -977,6 +989,9 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+/*.fonctionnement_section :nth-child(3) {
+  margin-bottom: 38px;
+}*/
 .fonctionnement_section :hover {
   background: #f2eafb;
 }
@@ -1031,7 +1046,7 @@ body {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 58px;
+  margin-left: 50px;
 }
 .restaurants_cards {
   width: 275px;
@@ -1092,8 +1107,18 @@ h4 {
 }
 
 /*
-Média query 375px<
- */
+Média query 415px
+*/
+
+@media screen and (max-width: 683px) {
+  .fonctionnement_section_card {
+    margin: 12px 10px;
+  }
+}
+
+/*
+Média query 375px 
+*/
 @media screen and (max-width: 375px) {
   .restaurants {
     display: flex;
@@ -1137,7 +1162,6 @@ Média query 375px<
     flex-direction: row;
     align-items: center;
     border-radius: 10px;
-    margin: 12px 0 12px 0;
     border: 1px solid #f2f2f2;
     width: 80%;
     padding: 0 0 0 32px;

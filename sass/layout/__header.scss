@@ -103,6 +103,16 @@ SCSS du header 375px<
       padding: 0 8px 0 18px;
     }
 
+    &_location {
+      width: 100%;
+      border-radius: 0;
+
+      p {
+        width: 75%;
+        margin: 0 0 8px 0;
+      }
+    }
+
     &_discover {
       display: flex;
       flex-direction: column;
@@ -122,11 +132,6 @@ SCSS du header 375px<
         width: 55%;
         text-align: center;
       }
-    }
-
-    &_location {
-      width: 100%;
-      border-radius: 0;
     }
   }
 
