@@ -1,0 +1,1678 @@
+@charset "UTF-8";
+/*
+Déclaration des variables
+ */
+/*
+SCSS des boutons
+ */
+.btn {
+  margin: 16px;
+  text-align: center;
+  background-size: 200% auto;
+  color: #ffffff;
+  border-radius: 30px;
+  border: none;
+  -webkit-box-shadow: 0 2px 5px 2px darkgrey;
+          box-shadow: 0 2px 5px 2px darkgrey;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #9356dc), color-stop(80%, #da22ff));
+  background-image: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
+  -webkit-box-shadow: 0 3px 6px 3px darkgrey;
+          box-shadow: 0 3px 6px 3px darkgrey;
+}
+
+.btn_grad {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #854fb4), color-stop(90%, #d54cf6));
+  background-image: linear-gradient(to top, #854fb4 10%, #d54cf6 90%);
+}
+
+/*
+Déclaration des variables
+ */
+/**
+SCSS des différentes animations
+ */
+.-hearts {
+  font-size: 32px;
+  height: 58px;
+  width: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+}
+
+.-hearts .far {
+  opacity: 1;
+  color: #f2f2f2;
+  position: absolute;
+}
+
+.-hearts .fas {
+  color: #ffffff;
+}
+
+.-hearts:hover {
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 32px;
+}
+
+.-hearts:hover .far {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.-hearts:hover .fas {
+  opacity: 1;
+  color: #da22ff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.-heartsMenu {
+  font-size: 32px;
+  padding-top: 22px;
+}
+
+.-heartsMenu .far {
+  opacity: 1;
+  color: #000000;
+  position: absolute;
+  right: 15px;
+  bottom: 6px;
+}
+
+.-heartsMenu .fas {
+  color: #ffffff;
+  position: absolute;
+  right: 15px;
+  bottom: 6px;
+}
+
+.-heartsMenu:hover {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 22px;
+}
+
+.-heartsMenu:hover .far {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.-heartsMenu:hover .fas {
+  opacity: 1;
+  color: #da22ff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu:hover .menu_check {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #ffffff;
+  padding: 0;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: #99e2d0;
+  overflow: hidden;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  -webkit-animation: check_translation 0.5s 1 forwards;
+          animation: check_translation 0.5s 1 forwards;
+}
+
+.menu:hover .menu_prix {
+  -webkit-animation: prix_translation 0.5s 1 forwards;
+          animation: prix_translation 0.5s 1 forwards;
+}
+
+.menu_check i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 22px;
+  -webkit-animation: rotate_icon 0.5s 1;
+          animation: rotate_icon 0.5s 1;
+}
+
+.spin {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.spin:after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 100%;
+  border: 6px solid;
+  border-color: #9356dc #000000 #99e2d0 #ff79da;
+  -webkit-animation: spin 2s;
+          animation: spin 2s;
+}
+
+.spinloader {
+  -webkit-animation: spinloader 2s;
+          animation: spinloader 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  background-color: rgba(10, 10, 10, 0.8);
+}
+
+.spinloader:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  opacity: 0;
+}
+
+.fade_short {
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
+}
+
+.fade_medium {
+  -webkit-animation: fade-in 4s;
+          animation: fade-in 4s;
+}
+
+.fade_long {
+  -webkit-animation: fade-in 6s;
+          animation: fade-in 6s;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/**
+SCSS des différentes animations 375px<
+ */
+@media screen and (max-width: 375px) {
+  .spin:after {
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    right: 0;
+    top: 30%;
+  }
+}
+
+/*
+Déclaration des variables
+ */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #22201f;
+  color: #ffffff;
+  padding: 10px 0 10px 0;
+}
+
+.footer a {
+  color: #ffffff;
+  margin: 8px 0 12px 0;
+  text-decoration: none;
+}
+
+.footer img {
+  height: 32px;
+  margin: 8px 0 8px 0;
+  width: 54%;
+}
+
+.footer i {
+  height: 18px;
+  width: 25px;
+}
+
+.footer p {
+  padding: 0;
+}
+
+.footer_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    padding: 0 0 0 18px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer img {
+    height: 32px;
+    margin: 8px 0 8px 0;
+    width: 54%;
+  }
+  .footer i {
+    height: 18px;
+    width: 25px;
+  }
+  .footer p {
+    padding: 0;
+  }
+  .footer_icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/*
+Déclaration des variables
+ */
+/*
+SCSS du header
+ */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.header_logo {
+  width: 250px;
+  padding: 8px 0 8px 0;
+}
+
+.header a {
+  position: absolute;
+  left: 18px;
+  top: 21px;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  color: #000000;
+}
+
+.header_menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header_image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header_location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: lightgrey;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  width: 100%;
+  height: 32px;
+}
+
+.header_location i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_location input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-weight: bold;
+  text-align: center;
+  width: 128px;
+}
+
+.header_discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  width: 100%;
+  padding: 22px 0 44px 0;
+}
+
+.header_discover p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 8px 0;
+}
+
+.btn_header {
+  width: 215px;
+  padding: 12px;
+}
+
+/*
+SCSS du header 375px<
+ */
+@media screen and (max-width: 375px) {
+  .header_image {
+    height: 249px;
+  }
+  .header_logo button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #ffffff;
+    border: 0;
+    padding: 0 8px 0 18px;
+  }
+  .header_location {
+    width: 100%;
+    border-radius: 0;
+  }
+  .header_location p {
+    width: 75%;
+    margin: 0 0 8px 0;
+  }
+  .header_discover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f2f2f2;
+    text-align: center;
+    border-radius: 0;
+    width: 100%;
+  }
+  .header_discover p {
+    width: 75%;
+    margin: 0 0 8px 0;
+  }
+  .header_discover h3 {
+    font-weight: bold;
+    width: 55%;
+    text-align: center;
+  }
+  .btn_header {
+    width: 215px;
+    padding: 12px;
+  }
+}
+
+/**
+Rotation de l'icône check
+ */
+@-webkit-keyframes rotate_icon {
+  10% {
+    -webkit-transform: rotate(-90deg) scale(1);
+            transform: rotate(-90deg) scale(1);
+  }
+  20% {
+    -webkit-transform: rotate(-75deg) scale(1);
+            transform: rotate(-75deg) scale(1);
+  }
+  40% {
+    -webkit-transform: rotate(-60deg) scale(1);
+            transform: rotate(-60deg) scale(1);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) scale(1);
+            transform: rotate(-45deg) scale(1);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg) scale(1);
+            transform: rotate(-30deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(5deg) scale(1);
+            transform: rotate(5deg) scale(1);
+  }
+}
+@keyframes rotate_icon {
+  10% {
+    -webkit-transform: rotate(-90deg) scale(1);
+            transform: rotate(-90deg) scale(1);
+  }
+  20% {
+    -webkit-transform: rotate(-75deg) scale(1);
+            transform: rotate(-75deg) scale(1);
+  }
+  40% {
+    -webkit-transform: rotate(-60deg) scale(1);
+            transform: rotate(-60deg) scale(1);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) scale(1);
+            transform: rotate(-45deg) scale(1);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg) scale(1);
+            transform: rotate(-30deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(5deg) scale(1);
+            transform: rotate(5deg) scale(1);
+  }
+}
+
+/**
+Déplacement du prix lors du survol
+ */
+@-webkit-keyframes prix_translation {
+  10% {
+    -webkit-transform: translate(-1px, 0);
+            transform: translate(-1px, 0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  40% {
+    -webkit-transform: translate(-8px, 0);
+            transform: translate(-8px, 0);
+  }
+  60% {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  80% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-25px, 0);
+            transform: translate(-25px, 0);
+  }
+}
+@keyframes prix_translation {
+  10% {
+    -webkit-transform: translate(-1px, 0);
+            transform: translate(-1px, 0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  40% {
+    -webkit-transform: translate(-8px, 0);
+            transform: translate(-8px, 0);
+  }
+  60% {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  80% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-25px, 0);
+            transform: translate(-25px, 0);
+  }
+}
+
+/**
+Apparition du check lors du survol
+ */
+@-webkit-keyframes check_translation {
+  10% {
+    width: 10px;
+  }
+  20% {
+    width: 15px;
+  }
+  40% {
+    width: 25px;
+  }
+  60% {
+    width: 35px;
+  }
+  80% {
+    width: 45px;
+  }
+  100% {
+    width: 55px;
+  }
+}
+@keyframes check_translation {
+  10% {
+    width: 10px;
+  }
+  20% {
+    width: 15px;
+  }
+  40% {
+    width: 25px;
+  }
+  60% {
+    width: 35px;
+  }
+  80% {
+    width: 45px;
+  }
+  100% {
+    width: 55px;
+  }
+}
+
+/**
+Rotation du spinner
+ */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*
+Permet de réduire l'opcacité du spinner et le le faire disparaitre
+ */
+@-webkit-keyframes spinloader {
+  90% {
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes spinloader {
+  90% {
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*
+Permet l'apparition des plats
+ */
+/*
+Déclaration des variables
+ */
+/*
+SCSS des boutons
+ */
+.btn {
+  margin: 16px;
+  text-align: center;
+  background-size: 200% auto;
+  color: #ffffff;
+  border-radius: 30px;
+  border: none;
+  -webkit-box-shadow: 0 2px 5px 2px darkgrey;
+          box-shadow: 0 2px 5px 2px darkgrey;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #9356dc), color-stop(80%, #da22ff));
+  background-image: linear-gradient(to top, #9356dc 20%, #da22ff 80%);
+  -webkit-box-shadow: 0 3px 6px 3px darkgrey;
+          box-shadow: 0 3px 6px 3px darkgrey;
+}
+
+.btn_grad {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #854fb4), color-stop(90%, #d54cf6));
+  background-image: linear-gradient(to top, #854fb4 10%, #d54cf6 90%);
+}
+
+/*
+Déclaration des variables
+ */
+/**
+SCSS des différentes animations
+ */
+.-hearts {
+  font-size: 32px;
+  height: 58px;
+  width: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+}
+
+.-hearts .far {
+  opacity: 1;
+  color: #f2f2f2;
+  position: absolute;
+}
+
+.-hearts .fas {
+  color: #ffffff;
+}
+
+.-hearts:hover {
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 32px;
+}
+
+.-hearts:hover .far {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.-hearts:hover .fas {
+  opacity: 1;
+  color: #da22ff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.-heartsMenu {
+  font-size: 32px;
+  padding-top: 22px;
+}
+
+.-heartsMenu .far {
+  opacity: 1;
+  color: #000000;
+  position: absolute;
+  right: 15px;
+  bottom: 6px;
+}
+
+.-heartsMenu .fas {
+  color: #ffffff;
+  position: absolute;
+  right: 15px;
+  bottom: 6px;
+}
+
+.-heartsMenu:hover {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 22px;
+}
+
+.-heartsMenu:hover .far {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.-heartsMenu:hover .fas {
+  opacity: 1;
+  color: #da22ff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu:hover .menu_check {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #ffffff;
+  padding: 0;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: #99e2d0;
+  overflow: hidden;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  -webkit-animation: check_translation 0.5s 1 forwards;
+          animation: check_translation 0.5s 1 forwards;
+}
+
+.menu:hover .menu_prix {
+  -webkit-animation: prix_translation 0.5s 1 forwards;
+          animation: prix_translation 0.5s 1 forwards;
+}
+
+.menu_check i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 22px;
+  -webkit-animation: rotate_icon 0.5s 1;
+          animation: rotate_icon 0.5s 1;
+}
+
+.spin {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.spin:after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 100%;
+  border: 6px solid;
+  border-color: #9356dc #000000 #99e2d0 #ff79da;
+  -webkit-animation: spin 2s;
+          animation: spin 2s;
+}
+
+.spinloader {
+  -webkit-animation: spinloader 2s;
+          animation: spinloader 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  background-color: rgba(10, 10, 10, 0.8);
+}
+
+.spinloader:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  opacity: 0;
+}
+
+.fade_short {
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
+}
+
+.fade_medium {
+  -webkit-animation: fade-in 4s;
+          animation: fade-in 4s;
+}
+
+.fade_long {
+  -webkit-animation: fade-in 6s;
+          animation: fade-in 6s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/**
+SCSS des différentes animations 375px<
+ */
+@media screen and (max-width: 375px) {
+  .spin:after {
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    right: 0;
+    top: 30%;
+  }
+}
+
+/**
+Rotation de l'icône check
+ */
+@keyframes rotate_icon {
+  10% {
+    -webkit-transform: rotate(-90deg) scale(1);
+            transform: rotate(-90deg) scale(1);
+  }
+  20% {
+    -webkit-transform: rotate(-75deg) scale(1);
+            transform: rotate(-75deg) scale(1);
+  }
+  40% {
+    -webkit-transform: rotate(-60deg) scale(1);
+            transform: rotate(-60deg) scale(1);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) scale(1);
+            transform: rotate(-45deg) scale(1);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg) scale(1);
+            transform: rotate(-30deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(5deg) scale(1);
+            transform: rotate(5deg) scale(1);
+  }
+}
+
+/**
+Déplacement du prix lors du survol
+ */
+@keyframes prix_translation {
+  10% {
+    -webkit-transform: translate(-1px, 0);
+            transform: translate(-1px, 0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  40% {
+    -webkit-transform: translate(-8px, 0);
+            transform: translate(-8px, 0);
+  }
+  60% {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  80% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-25px, 0);
+            transform: translate(-25px, 0);
+  }
+}
+
+/**
+Apparition du check lors du survol
+ */
+@keyframes check_translation {
+  10% {
+    width: 10px;
+  }
+  20% {
+    width: 15px;
+  }
+  40% {
+    width: 25px;
+  }
+  60% {
+    width: 35px;
+  }
+  80% {
+    width: 45px;
+  }
+  100% {
+    width: 55px;
+  }
+}
+
+/**
+Rotation du spinner
+ */
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*
+Permet de réduire l'opcacité du spinner et le le faire disparaitre
+ */
+@keyframes spinloader {
+  90% {
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*
+Permet l'apparition des plats
+ */
+/*
+Déclaration des variables
+ */
+/*
+SCSS des pages de menu
+ */
+body {
+  margin: 0;
+  font-family: "Roboto", cursive;
+}
+
+.carte {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.carte_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  position: absolute;
+  top: 245px;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.carte_name p {
+  font-size: x-large;
+  font-family: "Shrikhand", cursive;
+  padding: 18px 0 0 16px;
+}
+
+.carte .entrees,
+.carte .plats,
+.carte .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.carte .sous_titre {
+  margin: 25px 0 0 10%;
+  font-size: 18px;
+  width: 100%;
+}
+
+.carte .sous_titre:after {
+  content: "";
+  border-bottom: 2px solid #99e2d0;
+  display: block;
+  padding-top: 3px;
+  width: 40px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 18px;
+  -webkit-box-shadow: 0 0 4px 2px darkgrey;
+          box-shadow: 0 0 4px 2px darkgrey;
+  background-color: #ffffff;
+  margin: 8px;
+  width: 25%;
+}
+
+.menu_contenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 87%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px;
+}
+
+.menu_contenu p,
+.menu_contenu h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0 0 8px;
+}
+
+.menu_prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 12px 3px 14px;
+}
+
+.menu_prix p {
+  margin: 0;
+}
+
+.menu_check {
+  display: none;
+  width: 0;
+}
+
+.menu_check i {
+  font-size: x-large;
+}
+
+.btn_menu {
+  width: 215px;
+  padding: 12px;
+  margin: 32px 0 32px 0;
+}
+
+/*
+SCSS du header entre 900px et 376px
+ */
+@media screen and (min-width: 376px) and (max-width: 900px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 18px;
+    background-color: #ffffff;
+    margin: 0 22px 8px 22px;
+    width: 72%;
+  }
+  .menu_contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 87%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .carte .sous_titre {
+    margin: 25px 0 8px 11%;
+    font-size: 18px;
+    width: 100%;
+  }
+  .carte .sous_titre:after {
+    content: "";
+    border-bottom: 2px solid #99e2d0;
+    display: block;
+    padding-top: 3px;
+    width: 40px;
+  }
+}
+
+/*
+SCSS du header 375px<
+ */
+@media screen and (max-width: 375px) {
+  .carte {
+    background-color: #f2f2f2;
+    margin: 0;
+  }
+  .carte_name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f2f2f2;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    position: absolute;
+    top: 245px;
+    width: 100%;
+  }
+  .carte_name p {
+    font-size: x-large;
+    font-family: "Shrikhand", cursive;
+    padding: 18px 0 0 16px;
+  }
+  .carte .entrees,
+  .carte .plats,
+  .carte .desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 32px;
+  }
+  .carte .entrees h2,
+  .carte .plats h2,
+  .carte .desserts h2 {
+    margin: 8px 0 8px 14px;
+    border-bottom: 2px solid #99e2d0;
+    width: 40px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 18px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    width: 95%;
+  }
+  .menu_contenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 87%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .menu_contenu p,
+  .menu_contenu h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu_check {
+    display: none;
+  }
+  .btn_menu {
+    width: 215px;
+    padding: 12px;
+    margin: 16px 52px 16px 68px;
+  }
+}
+
+/*
+Déclaration des variables
+ */
+/*
+SCSS de la page d'accueil
+ */
+body {
+  margin: 0;
+  font-family: "Roboto", cursive;
+}
+
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.fonctionnement h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fonctionnement_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*&_:nth-child(3) {
+      margin-bottom: 38px;
+    }*/
+}
+
+.fonctionnement_section :hover {
+  background: #f2eafb;
+}
+
+.fonctionnement_section :hover i {
+  color: #9356dc;
+}
+
+.fonctionnement_section :hover h6 {
+  background: #9356dc;
+}
+
+.fonctionnement_section_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  margin: 12px;
+  border: 1px solid #f2f2f2;
+  width: 270px;
+  padding: 0 0 0 32px;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.fonctionnement_section_card h6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  color: #ffffff;
+  background-color: #9356dc;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  margin-left: -42px;
+  margin-right: 42px;
+}
+
+.fonctionnement_section_card p {
+  font-weight: bold;
+}
+
+.fonctionnement_section_card i {
+  padding: 0 18px 0 0;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  z-index: 1;
+}
+
+.restaurants .menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 58px;
+}
+
+.restaurants_cards {
+  width: 275px;
+  height: 215px;
+  margin: 12px 40px 50px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px #f2f2f2;
+          box-shadow: 10px 10px 5px #f2f2f2;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+}
+
+.restaurants_cards a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.restaurants_cards .img_restaurants {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.restaurants_cards .img_restaurants .btn_nouveau {
+  color: green;
+  background-color: #99e2d0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.restaurants_cards img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.restaurants .cards_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurants .cards_content .-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 295px;
+}
+
+.restaurants .cards_content .-infos h4 {
+  margin: 8px 0 0 8px;
+  padding: 0 4px 0 4px;
+}
+
+.restaurants .cards_content .-infos p {
+  margin: 4px 0 12px 8px;
+  padding: 0 4px 0 4px;
+}
+
+p,
+h4 {
+  margin: 4px 0 0 0;
+  padding: 0 4px 0 4px;
+}
+
+/*
+Média query 415px
+*/
+@media screen and (max-width: 683px) {
+  .fonctionnement_section_card {
+    margin: 12px;
+  }
+}
+
+/*
+Média query 375px<
+ */
+@media screen and (max-width: 375px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .restaurants h3 {
+    margin-left: 22px;
+  }
+  .restaurants .menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .restaurants .menus .restaurants_cards {
+    height: 100%;
+    margin: 0 18px 18px 18px;
+    width: 90%;
+  }
+  .restaurants .menus .restaurants_cards h3 {
+    margin-right: 228px;
+  }
+  .restaurants .menus .restaurants_cards .cards_content .-infos a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .fonctionnement h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 22px;
+  }
+  .fonctionnement_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fonctionnement_section_card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    margin: 12px 0 12px 38px;
+    border: 1px solid #f2f2f2;
+    width: 80%;
+    padding: 0 0 0 32px;
+  }
+  .fonctionnement_section_card h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #9356dc;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .fonctionnement_section_card p {
+    font-weight: bold;
+  }
+  .fonctionnement_section_card i {
+    padding: 0 18px 0 0;
+  }
+}
+
+/*
+Déclaration des variables
+ */
+/*# sourceMappingURL=main.css.map */
