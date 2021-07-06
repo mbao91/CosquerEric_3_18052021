@@ -617,8 +617,8 @@ SCSS des différentes animations
 }
 
 .spinloader {
-  animation: spinloader 3s;
-  animation-delay: 1s;
+  animation: spinloader 2s;
+  animation-delay: 0.5s;
   animation-fill-mode: both;
   position: fixed;
   bottom: 0;
